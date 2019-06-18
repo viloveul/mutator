@@ -1,0 +1,30 @@
+{
+    "name": "viloveul/mutator",
+    "description": "Object Mutator of Viloveul",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["zafex", "viloveul", "fajrulaz", "mutator", "component", "library"],
+    "homepage": "http://www.viloveul.com",
+    "readme": "README.MD",
+    "authors": [{
+        "name": "Fajrul Akbar Zuhdi",
+        "email": "fajrulaz@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Viloveul\\Mutator\\": "src/"
+        }
+    },
+    "require": {
+        "php": "~7.0",
+        "ext-spl": "*"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.5"
+    }
+}
