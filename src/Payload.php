@@ -4,9 +4,9 @@ namespace Viloveul\Mutator;
 
 use ArrayIterator;
 use JsonSerializable;
-use Viloveul\Mutator\Contracts\Context as IContext;
+use Viloveul\Mutator\Contracts\Payload as IPayload;
 
-class Payload implements IContext, JsonSerializable
+class Payload implements IPayload, JsonSerializable
 {
     /**
      * @var array

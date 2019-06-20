@@ -23,15 +23,15 @@ composer require viloveul/mutator
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-$mutator = new Viloveul\Mutator\Manager();
-$mutator->addFilter('test', function(Viloveul\Mutator\Contracts\Context $ctx) {
-	$ctx->foo = "baz";
-	return $ctx;
+$context = new Viloveul\Mutator\Context();
+$context->addHandler('test', function(Viloveul\Mutator\Contracts\Payload $payload) {
+	$payload->foo = "baz";
+	return $payload;
 });
 
 $payload = new Viloveul\Mutator\Payload([
 	'foo' => 'bar'
 ]);
-$result = $mutator->apply('test', $payload);
+$result = $context->apply('test', $payload);
 var_dump($result);
 ```
